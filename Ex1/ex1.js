@@ -3,7 +3,7 @@
 //   events
 // The event handler function for the name text box
 var min= 0;
-var max= 100000;
+var max= 100;
 
 //var myParam_a= document.getElementById("myForm");
 //document.write(myParam_a.param[0].value);
@@ -27,8 +27,6 @@ function chkParam(event) {
 }
 
 
-
-
 function calcVolume() {
   var a= document.getElementById("a").value;
   var b = document.getElementById("b").value;
@@ -37,5 +35,4 @@ function calcVolume() {
   document.getElementById("volume").value = (4/3)* Math.PI* a*b*c;
 }  //* end of computeCost
 
-//Can you add to your code so that only computes cost when all three params are correct??
 

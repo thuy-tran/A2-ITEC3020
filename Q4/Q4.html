@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Q5.html
+     A document for Q5.js
+     Creates text box for a numeric input
+     -->
+<html lang = "en">
+  <head>
+    <title>Palindrome Check</title>
+    <meta charset = "utf-8" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h3> Is Palindrome?</h3>
+      <p>Enter a positive integer number to test if it is palindromic</p>
+      <input id="numericInput">
+      <button type="button" onclick="check_palindrome()">Submit</button>
+        <p> Result:</p>
+        <p id="result"></p>
+      <script>
+        function check_palindrome(){
+          var user_input = document.getElementById("numericInput").value;
+          var input=user_input;
+          var reverse =0;
+          var is_palindrome;
+
+          if(user_input<0){
+            alert("Please enter positive integer number");
+            return false;
+          }
+          while(input >= 10){
+            var temp = input%10;
+            input = Math.floor(input/10);
+            reverse=reverse*10+temp;
+          }
+          reverse=reverse*10+input;
+
+          if (reverse==Number(user_input))
+          { is_palindrome="Yes";}
+          else{
+            is_palindrome="No";
+          }
+
+          document.getElementById("result").innerHTML=is_palindrome;
+        }
+      </script>
+    </div>
+  </body>
+</html>

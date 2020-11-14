@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Q5.html
+     A document for Q5.js
+     Creates text box for a numeric input
+     -->
+<html lang = "en">
+  <head>
+    <title>Display triangle  </title>
+    <meta charset = "utf-8" />
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="container">
+      <h3> Let's build a triangle </h3>
+      <p>Enter any positive integer number to play</p>
+      <input id="numericInput">
+      <button type="button" onclick="form_triangle();">Submit</button>
+      <br /><br />
+      <p id="result"></p>
+      <script>
+        function form_triangle(){
+          var input=document.getElementById("numericInput").value;
+          var x="XX ";
+          var result=" ";
+
+          if (input<1){
+            alert ("The input entered is invalid. Please enter positive integer number");
+            return false;
+          }
+          else{
+            for (var i = 1; i<= input; i++){
+              result+=x.repeat(i) + "<br/>";
+            } 
+          }
+          document.getElementById("result").innerHTML=result;  
+        }
+      </script>
+    </div>
+  </body>
+</html>

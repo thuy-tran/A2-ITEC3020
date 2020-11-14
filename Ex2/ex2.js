@@ -13,7 +13,9 @@ function convertGrade() {
 
   var y = document.getElementById("num_grade").value;
   var x= parseFloat(y);
-
+  if (x < 0 || x >100){
+    alert("Please enter valid grade");
+  }
   switch(true)
   {
     case (x>=90 && x<=100): 
