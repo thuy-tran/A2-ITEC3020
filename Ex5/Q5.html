@@ -12,11 +12,13 @@
   <body>
     <div class="container">
       <h3> Let's build a triangle </h3>
-      <p>Enter any positive integer number to play</p>
-      <input id="numericInput">
-      <button type="button" onclick="form_triangle();">Submit</button>
-      <br /><br />
-      <p id="result"></p>
+      <form action="">
+        <p>Enter any positive integer number to play</p>
+        <input id="numericInput">
+        <button type="button" onclick="form_triangle();">Submit</button>
+        <br /><br />
+        <p id="result"></p>
+      </form>
       <script>
         function form_triangle(){
           var input=document.getElementById("numericInput").value;

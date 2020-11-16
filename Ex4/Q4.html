@@ -12,11 +12,13 @@
   <body>
     <div class="container">
       <h3> Is Palindrome?</h3>
-      <p>Enter a positive integer number to test if it is palindromic</p>
-      <input id="numericInput">
-      <button type="button" onclick="check_palindrome()">Submit</button>
+      <form action="">
+        <p>Enter a positive integer number to test if it is palindromic</p>
+        <input id="numericInput">
+        <button type="button" onclick="check_palindrome()">Submit</button>
         <p> Result:</p>
         <p id="result"></p>
+      </form>
       <script>
         function check_palindrome(){
           var user_input = document.getElementById("numericInput").value;
